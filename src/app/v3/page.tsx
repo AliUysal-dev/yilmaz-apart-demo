@@ -392,15 +392,25 @@ export default function V3Page() {
                       <p className="mt-1 text-sm text-neutral-500">{SITE.city}</p>
                     </div>
                   </div>
-                  <a
-                    href={SITE.mapsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
-                  >
-                    <Navigation className="size-4" aria-hidden="true" />
-                    Google Haritalar&apos;da aç
-                  </a>
+                  <div className="mt-4 flex flex-col gap-2">
+                    <a
+                      href={SITE.googleShareUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
+                    >
+                      <Navigation className="size-4" aria-hidden="true" />
+                      Google Haritalar&apos;da aç
+                    </a>
+                    <a
+                      href={SITE.googleReviewUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
+                    >
+                      Google&apos;da yorum yaz
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -455,6 +465,24 @@ export default function V3Page() {
               >
                 {SITE.phoneDisplay}
               </a>
+              <div className="mt-3 flex flex-col gap-1.5">
+                <a
+                  href={SITE.googleShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-neutral-950"
+                >
+                  Google Haritalar
+                </a>
+                <a
+                  href={SITE.googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-neutral-950"
+                >
+                  Google yorumları
+                </a>
+              </div>
             </div>
           </div>
           <p className="border-t border-neutral-200 pt-6 text-xs text-neutral-400">

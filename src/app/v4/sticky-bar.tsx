@@ -6,7 +6,7 @@ export function V4StickyBar() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-stone-200 bg-white p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden">
       <div className="mx-auto grid max-w-lg grid-cols-2 gap-2">
         <a
-          href="tel:05447804478"
+          href={`tel:${SITE.phoneTel}`}
           className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-stone-900 text-sm font-semibold text-white"
         >
           <Phone className="size-4" aria-hidden="true" />

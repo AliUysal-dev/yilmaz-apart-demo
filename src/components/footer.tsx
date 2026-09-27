@@ -26,6 +26,24 @@ export function Footer() {
             >
               {SITE.phoneDisplay}
             </a>
+            <div className="mt-3 flex flex-col gap-1.5">
+              <a
+                href={SITE.googleShareUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                Google Haritalar
+              </a>
+              <a
+                href={SITE.googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                Google yorumları
+              </a>
+            </div>
           </div>
         </div>
 

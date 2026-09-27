@@ -1,4 +1,4 @@
-import { MapPin, Navigation } from "lucide-react";
+import { MapPin, Navigation, Star } from "lucide-react";
 import Image from "next/image";
 import { SITE } from "@/lib/constants";
 
@@ -45,15 +45,26 @@ export function Location() {
                     <p className="mt-1 text-sm text-muted">{SITE.city}</p>
                   </div>
                 </div>
-                <a
-                  href={SITE.mapsLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
-                >
-                  <Navigation className="size-4" aria-hidden="true" />
-                  Google Haritalar&apos;da aç
-                </a>
+                <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                  <a
+                    href={SITE.googleShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+                  >
+                    <Navigation className="size-4" aria-hidden="true" />
+                    Google Haritalar&apos;da aç
+                  </a>
+                  <a
+                    href={SITE.googleReviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+                  >
+                    <Star className="size-4" aria-hidden="true" />
+                    Google&apos;da yorum yaz
+                  </a>
+                </div>
               </div>
             </div>
 

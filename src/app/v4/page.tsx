@@ -249,14 +249,24 @@ export default function V4Page() {
                   allowFullScreen
                 />
               </div>
-              <a
-                href={SITE.mapsLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
-              >
-                Google Haritalar&apos;da aç
-              </a>
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
+                <a
+                  href={SITE.googleShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
+                >
+                  Google Haritalar&apos;da aç
+                </a>
+                <a
+                  href={SITE.googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-medium text-[#C2410C] hover:text-[#9A3412]"
+                >
+                  Google&apos;da yorum yaz
+                </a>
+              </div>
             </section>
           </div>
 
@@ -272,7 +282,7 @@ export default function V4Page() {
                 </p>
 
                 <a
-                  href="tel:05447804478"
+                  href={`tel:${SITE.phoneTel}`}
                   className="mt-5 flex items-center gap-2 text-base font-semibold text-stone-900"
                 >
                   <Phone className="size-4 text-[#C2410C]" aria-hidden="true" />
@@ -281,20 +291,39 @@ export default function V4Page() {
 
                 <div className="mt-5 flex flex-col gap-2.5">
                   <a
-                    href="tel:05447804478"
+                    href={`tel:${SITE.phoneTel}`}
                     className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#C2410C] text-sm font-semibold text-white transition-colors hover:bg-[#9A3412]"
                   >
                     <Phone className="size-4" aria-hidden="true" />
                     Hemen Ara
                   </a>
                   <a
-                    href="https://wa.me/905447804478"
+                    href={SITE.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-[#128C7E] text-sm font-semibold text-white transition-colors hover:bg-[#0E7368]"
                   >
                     <MessageCircle className="size-4" aria-hidden="true" />
                     WhatsApp&apos;tan Bilgi Al
+                  </a>
+                </div>
+
+                <div className="mt-4 flex flex-col gap-1.5 border-t border-stone-100 pt-4 text-center text-xs">
+                  <a
+                    href={SITE.googleShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-stone-600 hover:text-stone-900"
+                  >
+                    Google Haritalar
+                  </a>
+                  <a
+                    href={SITE.googleReviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-stone-600 hover:text-stone-900"
+                  >
+                    Google&apos;da yorum yaz
                   </a>
                 </div>
 
@@ -312,12 +341,30 @@ export default function V4Page() {
                 İletişim & Danışma
               </h2>
               <a
-                href="tel:05447804478"
+                href={`tel:${SITE.phoneTel}`}
                 className="mt-3 flex items-center gap-2 text-base font-semibold text-stone-900"
               >
                 <Phone className="size-4 text-[#C2410C]" aria-hidden="true" />
                 {SITE.phoneDisplay}
               </a>
+              <div className="mt-3 flex flex-col gap-1.5 text-sm">
+                <a
+                  href={SITE.googleShareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-[#C2410C]"
+                >
+                  Google Haritalar
+                </a>
+                <a
+                  href={SITE.googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-[#C2410C]"
+                >
+                  Google&apos;da yorum yaz
+                </a>
+              </div>
               <p className="mt-3 text-xs text-stone-500">
                 Komisyonsuz, doğrudan yönetimden kiralık.
               </p>
@@ -330,6 +377,24 @@ export default function V4Page() {
         <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
           <p className="text-sm font-semibold text-stone-900">{SITE.name}</p>
           <p className="mt-1 text-sm text-stone-500">{SITE.fullAddress}</p>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-stone-500">
+            <a
+              href={SITE.googleShareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-stone-900"
+            >
+              Google Haritalar
+            </a>
+            <a
+              href={SITE.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-stone-900"
+            >
+              Google yorumları
+            </a>
+          </div>
           <p className="mt-4 text-xs text-stone-400">
             © {new Date().getFullYear()} {SITE.name}
           </p>
